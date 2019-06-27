@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">  
 <title>Getting Started | MarkLight</title>
 <script src="../../js/html5shiv.js"></script>  <!-- support for HTML5 in IE8 -->
-<!-- CSS file links -->
+<!-- CSS file links --> 
 <link href="../../css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="../../css/bootstrap.icon-large.min.css" rel="stylesheet">
 <link href="../../css/style-documentation.css" rel="stylesheet" type="text/css" media="all" id="styleChange" />
@@ -367,6 +367,22 @@ public class MainMenu : UIView
           Before we continue adding logic to our view model I want to go over some fundamentals on UI layout.<br>
           <br>
 
+
+          <h2>Button Handling</h2>
+                    <br>In the example above, we called the "StartGame" method.  However, sometimes, it is necessary to know more about what is going on with the Button especially when the Button 
+                    ends up being replicated in structures such as Lists. In this case, you have to know more about the button than a simple "Click".  
+                    <br>
+                    <br>Marklight has the ability  pass up to three different parameters into your 
+                    handlers.  It's super easy, just include which of the three types (ActionData, View or BaseEventData) you want passed and it will be included. Marklight will dynamically match
+                    the right values regardless of the ordered specified.  All three of these types can be specified optionally:
+<pre><code class="c#">
+    public void StartGame( ActionData actionData , View view , BaseEventData baseEventData ) {
+
+    }
+</code>
+</pre>
+
+<br>
 
           <a class="docIndexAnchor" id="layout"></a>
           <h2>Layout</h2>
